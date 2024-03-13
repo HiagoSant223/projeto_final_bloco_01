@@ -2,25 +2,25 @@ package games.model;
 
 public class GeneroAcao extends Games{
 	
-	private float obterTamanhoArquivo;
+	private int taxaAcao = 5;
 
-	public GeneroAcao(int id, String titulo, String genero, float valor, float obterTamanhoArquivo) {
+	public GeneroAcao(int id, String titulo, int genero, float valor, int taxaAcao) {
 		super(id, titulo, genero, valor);
-		this.obterTamanhoArquivo = obterTamanhoArquivo;
+		this.taxaAcao = taxaAcao;
 		
 	}
 	
-	public float getObterTamanhoArquivo() {
-		return obterTamanhoArquivo;
+	public float gettaxaAcao() {
+		return taxaAcao;
 	}
 
-	public void setObterTamanhoArquivo(float obterTamanhoArquivo) {
-		this.obterTamanhoArquivo = obterTamanhoArquivo;
+	public void setObterTamanhoArquivo(int taxaAcao) {
+		this.taxaAcao = taxaAcao;
 	}
-
-	public float obterTamanhoArquivo() {
-        // Implementação para obter o tamanho do arquivo do jogo de ação em MB
-        return 200.8f; // Exemplo: 200.8 MB
-    }
-
+	
+	@Override
+	public void visualizar() {
+		super.visualizar();
+		System.out.println("Taxa do Jogo: " + this.taxaAcao);
+}
 }

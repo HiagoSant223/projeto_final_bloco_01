@@ -8,8 +8,8 @@ public interface GamesRepository {
 	
 	public void criarJogo(Games jogo);
 	List<Games> listarTodosJogos();
-	Games buscarJogoPorId(int id);
-	List<Games> buscarJogosPorGenero(String genero);
+	Games buscarNaCollection(int id);
+	public void procurarPorId(int id);
 	public void atualizarJogo(Games jogo);
 	public void deletarJogo(int id);
 }

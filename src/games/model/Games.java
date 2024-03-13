@@ -4,11 +4,11 @@ public abstract class Games {
 
 	private int id;
 	private String titulo;
-	private String genero;
+	private int genero;
 	private float valor;
 	
 	
-	public Games(int id, String titulo, String genero, float valor){
+	public Games(int id, String titulo, int genero, float valor){
 		this.id = id;
 		this.titulo = titulo;
 		this.genero = genero;
@@ -36,12 +36,12 @@ public abstract class Games {
 	}
 
 
-	public String getGenero() {
+	public int getGenero() {
 		return genero;
 	}
 
 
-	public void setGenero(String genero) {
+	public void setGenero(int genero) {
 		this.genero = genero;
 	}
 
@@ -56,10 +56,25 @@ public abstract class Games {
 	}
 	
 	public void visualizar() {
-        System.out.println("ID: " + id);
-        System.out.println("Título: " + titulo);
-        System.out.println("Gênero: " + genero);
-        System.out.println("Valor: " + valor);
-    }
+		
+		String genero = "";
+		
+		switch(this.genero) {
+		case 1:
+			genero = "Jogo de Aventura";
+			break;
+		case 2:
+			genero = "Jogo de Acao";
+			break;
+		}
+		
+		System.out.println("\n\n***********************************************************");
+		System.out.println("Dados do Jogo:");
+		System.out.println("***********************************************************");
+		System.out.println("Id do Jogo: " + this.id);
+		System.out.println("Titulo: " + this.titulo);
+		System.out.println("Genero do Jogo: " + genero);
+		System.out.println("Valor: " + this.valor);
+	}
 	
 }

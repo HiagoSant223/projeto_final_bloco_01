@@ -2,24 +2,26 @@ package games.model;
 
 public class GeneroAventura extends Games {
 	
-	private int calcularTempoDeJogo;
+	private int taxaAventura = 10;
 
-	public GeneroAventura(int id, String titulo, String genero, float valor, int calcularTempoDeJogo) {
+	public GeneroAventura(int id, String titulo, int genero, float valor, int taxaAventura) {
 		super(id, titulo, genero, valor);
-		this.calcularTempoDeJogo = calcularTempoDeJogo;
+		this.taxaAventura = taxaAventura;
 		
 	}
 	
-	public int getCalcularTempoDeJogo() {
-		return calcularTempoDeJogo;
+	public int gettaxaAventura() {
+		return taxaAventura;
 	}
 
-	public void setCalcularTempoDeJogo(int calcularTempoDeJogo) {
-		this.calcularTempoDeJogo = calcularTempoDeJogo;
+	public void settaxaAventura(int taxaAventura) {
+		this.taxaAventura = taxaAventura;
 	}
-
-	public int calcularTempoDeJogo() {
-		return 10;
-    }
+	
+	@Override
+	public void visualizar() {
+		super.visualizar();
+		System.out.println("Taxa do Jogo: " + this.taxaAventura);
+}
 
 }

@@ -4,15 +4,25 @@ import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import games.model.GeneroAventura;
+import games.model.GeneroAcao;
 import games.util.Cores;
 
-public class Menu {
+public class  Menu {
 
 	public static void main(String[] args) {
+		
+		
 		
 		Scanner leia = new Scanner(System.in);
 		
 		int opcao;
+		
+		GeneroAventura j1 = new GeneroAventura(1, "Avatar", "Aventura", 350.00f, 35);
+		j1.visualizar();
+		
+		GeneroAcao j2 = new GeneroAcao(2, "Fortenite", "Acao", 370.00f, 90f);
+		j2.visualizar();
 		
 		while(true) {
 
